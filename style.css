@@ -1,3 +1,13 @@
+/* Page title styling */
+#page-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    width: 100%; /* Full width */
+    max-width: 500px; /* Optional: Set a max size */
+    margin: 8px;
+}
+
 /* Header styling */
 #header {
     display: flex;

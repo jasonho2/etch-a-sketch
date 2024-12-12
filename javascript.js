@@ -1,3 +1,9 @@
+// add Etch-a-Sketch title
+const pageTitle = document.createElement("div");
+pageTitle.textContent = "Etch-a-Sketch Sketchpad";
+pageTitle.id = "page-title";
+document.body.appendChild(pageTitle);
+
 // create input box to define grid size
 const inputLabel = document.createElement("label");
 inputLabel.textContent = "Enter a grid size: ";
