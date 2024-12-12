@@ -7,10 +7,15 @@ const generateGridButton = document.createElement("button");
 generateGridButton.textContent = "Generate Grid";
 generateGridButton.id = "generate-grid";
 
+// set up the header container
+const headerContainer = document.createElement("div");
+headerContainer.id = "header";
+document.body.appendChild(headerContainer);
+
 // append the label, input, and button to the document body, not container
-document.body.appendChild(inputLabel);
-document.body.appendChild(inputBox);
-document.body.appendChild(generateGridButton);
+headerContainer.appendChild(inputLabel);
+headerContainer.appendChild(inputBox);
+headerContainer.appendChild(generateGridButton);
 
 // set up the flexbox container grid
 const gridContainer = document.createElement("div");
