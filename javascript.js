@@ -52,10 +52,10 @@ function createGrid(size) {
 generateGridButton.addEventListener('click', () => {
 
     const size = parseInt(inputBox.value);
-    if (!isNaN(size) && size > 0) {
+    if (!isNaN(size) && size > 0 && size < 65) {
         createGrid(size);
     } else {
-        alert('Please enter a valid positive number.');
+        alert('Please enter a valid positive number less than 65.');
     }
     
 });
