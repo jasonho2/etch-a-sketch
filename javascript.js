@@ -2,10 +2,10 @@
 const inputLabel = document.createElement("label");
 inputLabel.textContent = "Enter a grid size: ";
 const inputBox = document.createElement("input");
-inputBox.id = "grid-size";
+inputBox.id = "input-box";
 const generateGridButton = document.createElement("button");
 generateGridButton.textContent = "Generate Grid";
-generateGridButton.id = "generate-grid";
+generateGridButton.id = "generate-grid-button";
 
 // set up the header container
 const headerContainer = document.createElement("div");

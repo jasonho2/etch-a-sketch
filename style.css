@@ -9,6 +9,11 @@
     padding: 16px;
 }
 
+#input-box {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
 /* Container body/grid styling */
 #container {
     display: flex;
