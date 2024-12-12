@@ -4,14 +4,15 @@
     flex-wrap: wrap;
     align-items: center;
     align-content: center;
-    min-width: 320px; /* minimum width of the grid */
-    min-height: 320px; /* minimum height of the grid */
+    width: 100%; /* Full width */
+    max-width: 500px; /* Optional: Set a max size */
+    height: auto; /* Height will adjust based on aspect ratio */
     border: 1px solid black;
+    aspect-ratio: 1 / 1; /* Keep the grid square */
 }
 
 /* Individual square styling */
 .grid-item {
-    flex: 1 2 calc(100% / 17); /* Adjust size to fit 16 per row */
-    aspect-ratio: 1 / 1; /* Keep squares perfectly square */
+    box-sizing: border-box; /* Ensure borders don’t affect size */
     border: 1px solid #ccc; /* Optional: add borders for clarity */
 }
