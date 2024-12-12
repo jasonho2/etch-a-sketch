@@ -61,6 +61,5 @@ generateGridButton.addEventListener('click', () => {
 inputBox.addEventListener('keypress', (e) => {
     if (document.activeElement === inputBox && e.key === "Enter") {
         generateGridButton.click();
-        createGrid(size);
     }
 });
