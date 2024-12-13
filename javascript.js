@@ -43,9 +43,20 @@ function createGrid(size) {
         square.style.flexBasis = `${squareSize}%`; // Set width dynamically
         square.style.aspectRatio = '1 / 1'; // Maintain square shape
 
-        // Add event listener for hover effect
+        /*
+        // Add event listener for hover effect - random color
         square.addEventListener('mouseover', () => {
             square.style.backgroundColor = randomColor(); // call random color function upon mouseover
+        });
+        */
+
+        // Initialize the square's darkness level
+        let darkness = 0;
+
+        // Add event listener for hover effect - darken by 10% until the square becomes black in 10 interactions
+        square.addEventListener('mouseover', () => {
+            darkness = Math.min(darkness + 0.1, 1); // Increase darkness by 10%, cap at 100%
+            square.style.backgroundColor = `rgba(0, 0, 0, ${darkness})`; // Darken the color
         });
 
         gridContainer.appendChild(square);
