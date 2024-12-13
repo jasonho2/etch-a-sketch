@@ -45,7 +45,7 @@ function createGrid(size) {
 
         // Add event listener for hover effect
         square.addEventListener('mouseover', () => {
-            square.style.backgroundColor = 'black';
+            square.style.backgroundColor = randomColor(); // call random color function upon mouseover
         });
 
         gridContainer.appendChild(square);
@@ -69,3 +69,13 @@ inputBox.addEventListener('keypress', (e) => {
         generateGridButton.click();
     }
 });
+
+// function for randomizing colors of mouse cursor hover / mouseover
+function randomColor() {
+    const codes = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += codes[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
