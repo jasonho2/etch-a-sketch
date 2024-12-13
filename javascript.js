@@ -50,6 +50,7 @@ function createGrid(size) {
         });
         */
 
+        // not using CSS opacity style
         // Initialize the square's darkness level
         let darkness = 0;
 
@@ -58,6 +59,20 @@ function createGrid(size) {
             darkness = Math.min(darkness + 0.1, 1); // Increase darkness by 10%, cap at 100%
             square.style.backgroundColor = `rgba(0, 0, 0, ${darkness})`; // Darken the color
         });
+        
+        /* // using CSS opacity style
+        // initialize square opacity of fully transparent
+        square.style.backgroundColor = 'black';
+        square.style.opacity = '0';
+        square.style.backgroundClip = 'padding-box';
+        square.style.borderColor = '1px solid rgba(255, 255, 255, .1)';
+
+        // Add event listener for hover effect - darken by 10% until the square becomes black in 10 interactions
+        square.addEventListener('mouseover', () => {
+            const currentOpacity = parseFloat(square.style.opacity); // Increase darkness by 10%, cap at 100%
+            square.style.opacity = Math.min(currentOpacity + 0.1, 1); // Darken the color
+        });
+        */
 
         gridContainer.appendChild(square);
     }
