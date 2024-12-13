@@ -42,6 +42,12 @@ function createGrid(size) {
         square.classList.add('grid-item');
         square.style.flexBasis = `${squareSize}%`; // Set width dynamically
         square.style.aspectRatio = '1 / 1'; // Maintain square shape
+
+        // Add event listener for hover effect
+        square.addEventListener('mouseover', () => {
+            square.style.backgroundColor = 'black';
+        });
+
         gridContainer.appendChild(square);
     }
 
